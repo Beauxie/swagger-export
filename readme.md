@@ -40,3 +40,6 @@ mvn test
 * 文件位置
  执行成功以后，会在项目的`target/asciidoc/html`目录下，生成一个名为`index.html`文件，这个文件就是swagger离线api文档，用浏览器打开即可查看。
 
+
+**相关博客:**[使用springfox-staticdocs生成swagger离线api](https://blog.csdn.net/BeauXie/article/details/79835396)
+
