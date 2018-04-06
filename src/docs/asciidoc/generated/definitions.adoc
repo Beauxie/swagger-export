@@ -1,0 +1,1177 @@
+
+[[_definitions]]
+== Definitions
+
+[[_character]]
+=== Character
+__Type__ : object
+
+
+[[_logininfo]]
+=== LoginInfo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**loginId** +
+__optional__|string
+|**loginName** +
+__optional__|string
+|**loginTime** +
+__optional__|string
+|**loginType** +
+__optional__|string
+|===
+
+
+[[_logininfodto]]
+=== LoginInfoDTO
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**smRoleDTO** +
+__optional__|<<_smroledto,SmRoleDTO>>
+|**tokenInfo** +
+__optional__|<<_tokeninfo,TokenInfo>>
+|**userDTO** +
+__optional__|<<_userdto,UserDTO>>
+|===
+
+
+[[_menutreenode]]
+=== MenuTreeNode
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**children** +
+__optional__|< <<_menutreenode,MenuTreeNode>> > array
+|**functionId** +
+__optional__|string
+|**id** +
+__optional__|string
+|**menuType** +
+__optional__|integer (int32)
+|**name** +
+__optional__|string
+|**opertateType** +
+__optional__|integer (int32)
+|**pId** +
+__optional__|string
+|===
+
+
+[[_modulefunctiondto]]
+=== ModuleFunctionDTO
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**functions** +
+__optional__|< <<_servicefunction,ServiceFunction>> > array
+|**module** +
+__optional__|<<_servicemodule,ServiceModule>>
+|===
+
+
+[[_pageinfo]]
+=== PageInfo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**endRow** +
+__optional__|integer (int32)
+|**firstPage** +
+__optional__|integer (int32)
+|**hasNextPage** +
+__optional__|boolean
+|**hasPreviousPage** +
+__optional__|boolean
+|**isFirstPage** +
+__optional__|boolean
+|**isLastPage** +
+__optional__|boolean
+|**lastPage** +
+__optional__|integer (int32)
+|**list** +
+__optional__|< object > array
+|**navigateFirstPage** +
+__optional__|integer (int32)
+|**navigateLastPage** +
+__optional__|integer (int32)
+|**navigatePages** +
+__optional__|integer (int32)
+|**navigatepageNums** +
+__optional__|< integer (int32) > array
+|**nextPage** +
+__optional__|integer (int32)
+|**orderBy** +
+__optional__|string
+|**pageNum** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**pages** +
+__optional__|integer (int32)
+|**prePage** +
+__optional__|integer (int32)
+|**size** +
+__optional__|integer (int32)
+|**startRow** +
+__optional__|integer (int32)
+|**total** +
+__optional__|integer (int64)
+|===
+
+
+[[_54f46b28ce302bfffb01d6f5f9259f37]]
+=== PageInfo«SmMessageNotification»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**currentPageNumber** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**records** +
+__optional__|< <<_smmessagenotification,SmMessageNotification>> > array
+|**totalNum** +
+__optional__|integer (int64)
+|**totalPage** +
+__optional__|integer (int32)
+|===
+
+
+[[_becccbad69173bb63f84371f35106e6f]]
+=== PageInfo«SmOperateLog»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**currentPageNumber** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**records** +
+__optional__|< <<_smoperatelog,SmOperateLog>> > array
+|**totalNum** +
+__optional__|integer (int64)
+|**totalPage** +
+__optional__|integer (int32)
+|===
+
+
+[[_1b605da6f006d2eaf18dad683ef8b96c]]
+=== PageInfo«SmRoleDTO»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**currentPageNumber** +
+__optional__|integer (int32)
+|**pageSize** +
+__optional__|integer (int32)
+|**records** +
+__optional__|< <<_smroledto,SmRoleDTO>> > array
+|**totalNum** +
+__optional__|integer (int64)
+|**totalPage** +
+__optional__|integer (int32)
+|===
+
+
+[[_result]]
+=== Result
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|object
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_3249ed2a8b4e3d52befab695c0abb7b5]]
+=== Result«List«MenuTreeNode»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_menutreenode,MenuTreeNode>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_6a3501f040c7b613b6eadf8880da303b]]
+=== Result«List«ModuleFunctionDTO»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_modulefunctiondto,ModuleFunctionDTO>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_cd7d7797cb157a966d5196d617aec12e]]
+=== Result«List«ServiceModule»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_servicemodule,ServiceModule>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_535ffffcb58127f6d997880974dc9c6b]]
+=== Result«List«SmMenuDTO»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smmenudto,SmMenuDTO>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_37143281216f5dc7987f7540e3c7cad1]]
+=== Result«List«SmMenu»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smmenu,SmMenu>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_da9d7dccfb91abd3ba756321c820aebc]]
+=== Result«List«SmMessageNotification»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smmessagenotification,SmMessageNotification>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_4a07c0c90ed1f9fdbcb3a3a54a2cb7e0]]
+=== Result«List«SmRoleDTO»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smroledto,SmRoleDTO>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_ed59fd2a449f9d576cff1796b372f2fc]]
+=== Result«List«SmRoleType»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smroletype,SmRoleType>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_215a6b225584484906506191de09694c]]
+=== Result«List«SmRole»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_smrole,SmRole>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_2eb15b02d231947fdb53b60394c4121a]]
+=== Result«List«TreeNode»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|< <<_treenode,TreeNode>> > array
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_1739fbb09684bc014d73584deac158e5]]
+=== Result«LoginInfoDTO»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_logininfodto,LoginInfoDTO>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_826d56d61d5e151b732d6e681d102dda]]
+=== Result«PageInfo«SmMessageNotification»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_54f46b28ce302bfffb01d6f5f9259f37,PageInfo«SmMessageNotification»>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_a8ba590c0d8c28909f5fd991a360bf78]]
+=== Result«PageInfo«SmOperateLog»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_becccbad69173bb63f84371f35106e6f,PageInfo«SmOperateLog»>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_dd846f141dc04671df9d54b16ee03a2b]]
+=== Result«PageInfo«SmRoleDTO»»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_1b605da6f006d2eaf18dad683ef8b96c,PageInfo«SmRoleDTO»>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_5f0f2a4ab0639f5572384cbe8ab889eb]]
+=== Result«PageInfo»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_pageinfo,PageInfo>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_f585a546467deaaa3ef81e43bc80ec9c]]
+=== Result«ServiceApplication»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_serviceapplication,ServiceApplication>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_9b512305f12c727b640b0f0be69c9238]]
+=== Result«ServiceModule»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_servicemodule,ServiceModule>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_6c996bf220ca8f91fe865b6af940de19]]
+=== Result«SmButton»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smbutton,SmButton>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_4625506b33adef160cce171e2fe6e4e5]]
+=== Result«SmComponent»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smcomponent,SmComponent>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_74b4a298075fb459d07747c0bbb02b4c]]
+=== Result«SmMenu»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smmenu,SmMenu>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_aa6e09d099333372a16b1995336e53ca]]
+=== Result«SmRole»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smrole,SmRole>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_2677575fddd365b4f43382ae1056ee12]]
+=== Result«SmUserGroupReleation»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smusergroupreleation,SmUserGroupReleation>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_c160f838543cca27ab49e702fdb3d3d6]]
+=== Result«SmUserGroup»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_smusergroup,SmUserGroup>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_4f607e52b445989f6e67d8cec6972486]]
+=== Result«UserDTO»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_userdto,UserDTO>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_c325cb68f7bdaad8aa7df5c0208b027f]]
+=== Result«User»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|<<_user,User>>
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_72839f641ce130c8a6904a9ec5cebbe6]]
+=== Result«object»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|object
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_e249bf1902de7f75aaed353ffea96339]]
+=== Result«string»
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**data** +
+__optional__|string
+|**resCode** +
+__optional__|integer (int32)
+|**resMsg** +
+__optional__|string
+|===
+
+
+[[_serviceapplication]]
+=== ServiceApplication
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**lastModifyTime** +
+__optional__|string (date-time)
+|**logoPath** +
+__optional__|string
+|**name** +
+__optional__|string
+|**serviceHotline** +
+__optional__|string
+|**serviceUrl** +
+__optional__|string
+|**status** +
+__optional__|integer (int32)
+|**technicalSupport** +
+__optional__|string
+|===
+
+
+[[_servicefunction]]
+=== ServiceFunction
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**iconClass** +
+__optional__|string
+|**id** +
+__optional__|string
+|**isLeaf** +
+__optional__|boolean
+|**isRoot** +
+__optional__|boolean
+|**lastModifyTime** +
+__optional__|string (date-time)
+|**menuType** +
+__optional__|integer (int32)
+|**moduleId** +
+__optional__|string
+|**name** +
+__optional__|string
+|**omsModuleId** +
+__optional__|string
+|**parentId** +
+__optional__|string
+|**requirejs** +
+__optional__|string
+|**seqId** +
+__optional__|string
+|**type** +
+__optional__|string
+|**url** +
+__optional__|string
+|===
+
+
+[[_servicemodule]]
+=== ServiceModule
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**appId** +
+__optional__|string
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**lastModifyTime** +
+__optional__|string (date-time)
+|**name** +
+__optional__|string
+|**omsModuleId** +
+__optional__|string
+|**serviceUrl** +
+__optional__|string
+|**type** +
+__optional__|integer (int32)
+|**version** +
+__optional__|string
+|===
+
+
+[[_smbutton]]
+=== SmButton
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**description** +
+__optional__|string
+|**funcurl** +
+__optional__|string
+|**ico** +
+__optional__|string
+|**id** +
+__optional__|string
+|**menuId** +
+__optional__|string
+|**name** +
+__optional__|string
+|**requireJS** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_smcomponent]]
+=== SmComponent
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**description** +
+__optional__|string
+|**functionId** +
+__optional__|string
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**requireJS** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|**url** +
+__optional__|string
+|===
+
+
+[[_smmenu]]
+=== SmMenu
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**description** +
+__optional__|string
+|**functionId** +
+__optional__|string
+|**funcurl** +
+__optional__|string
+|**ico** +
+__optional__|string
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**parents** +
+__optional__|string
+|**pid** +
+__optional__|string
+|**requireJS** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_smmenudto]]
+=== SmMenuDTO
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**description** +
+__optional__|string
+|**functionId** +
+__optional__|string
+|**funcurl** +
+__optional__|string
+|**ico** +
+__optional__|string
+|**id** +
+__optional__|string
+|**menuType** +
+__optional__|integer (int32)
+|**moduleId** +
+__optional__|string
+|**name** +
+__optional__|string
+|**opertateType** +
+__optional__|integer (int32)
+|**parents** +
+__optional__|string
+|**pid** +
+__optional__|string
+|**requireJS** +
+__optional__|string
+|**seqId** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|===
+
+
+[[_smmessagenotification]]
+=== SmMessageNotification
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**accessurl** +
+__optional__|string
+|**appId** +
+__optional__|string
+|**content** +
+__optional__|string
+|**createTime** +
+__optional__|string
+|**description** +
+__optional__|string
+|**groupMessageLevel** +
+__optional__|<<_character,Character>>
+|**id** +
+__optional__|string
+|**lastModifyTime** +
+__optional__|string
+|**lastPushTime** +
+__optional__|string
+|**messageType** +
+__optional__|<<_character,Character>>
+|**moduleId** +
+__optional__|string
+|**receiptDatetime** +
+__optional__|string
+|**receiver** +
+__optional__|string
+|**receiverType** +
+__optional__|<<_character,Character>>
+|**reminderMode** +
+__optional__|string
+|**sendTimes** +
+__optional__|integer (int32)
+|**status** +
+__optional__|<<_character,Character>>
+|**submoduleId** +
+__optional__|string
+|**title** +
+__optional__|string
+|===
+
+
+[[_smoperatelog]]
+=== SmOperateLog
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**appId** +
+__optional__|string
+|**appName** +
+__optional__|string
+|**createTime** +
+__optional__|string
+|**deleteIds** +
+__optional__|< string > array
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**insertValues** +
+__optional__|< object > array
+|**lastModifyTime** +
+__optional__|string
+|**loginInfo** +
+__optional__|<<_logininfo,LoginInfo>>
+|**modifyFileds** +
+__optional__|< object > array
+|**moduleName** +
+__optional__|string
+|**operator** +
+__optional__|string
+|**operatorId** +
+__optional__|string
+|**subModuleName** +
+__optional__|string
+|**tableName** +
+__optional__|string
+|**terminalType** +
+__optional__|string
+|**type** +
+__optional__|string
+|===
+
+
+[[_smrole]]
+=== SmRole
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|**typeId** +
+__optional__|string
+|===
+
+
+[[_smroledto]]
+=== SmRoleDTO
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|**typeId** +
+__optional__|string
+|**typeName** +
+__optional__|string
+|===
+
+
+[[_smroletype]]
+=== SmRoleType
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**description** +
+__optional__|string
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**pinyinInitials** +
+__optional__|string
+|**sortOrder** +
+__optional__|number (double)
+|===
+
+
+[[_smusergroup]]
+=== SmUserGroup
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**groupName** +
+__optional__|string
+|**id** +
+__optional__|string
+|**lastModifyTime** +
+__optional__|string (date-time)
+|===
+
+
+[[_smusergroupreleation]]
+=== SmUserGroupReleation
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**createTime** +
+__optional__|string (date-time)
+|**description** +
+__optional__|string
+|**groupId** +
+__optional__|string
+|**id** +
+__optional__|string
+|**lastModifyTime** +
+__optional__|string (date-time)
+|**userId** +
+__optional__|string
+|===
+
+
+[[_synchronousoperatedata]]
+=== SynchronousOperateData
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**application** +
+__optional__|<<_serviceapplication,ServiceApplication>>
+|**toAddFuncList** +
+__optional__|< <<_servicefunction,ServiceFunction>> > array
+|**toAddModuleList** +
+__optional__|< <<_servicemodule,ServiceModule>> > array
+|**toDeleteFuncList** +
+__optional__|< <<_servicefunction,ServiceFunction>> > array
+|**toDeleteModuleList** +
+__optional__|< <<_servicemodule,ServiceModule>> > array
+|===
+
+
+[[_tokeninfo]]
+=== TokenInfo
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**token** +
+__optional__|string
+|===
+
+
+[[_treenode]]
+=== TreeNode
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**checked** +
+__optional__|boolean
+|**children** +
+__optional__|< <<_treenode,TreeNode>> > array
+|**id** +
+__optional__|string
+|**name** +
+__optional__|string
+|**pId** +
+__optional__|string
+|**parentspath** +
+__optional__|string
+|===
+
+
+[[_user]]
+=== User
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**birthday** +
+__optional__|string
+|**cellphone** +
+__optional__|string
+|**createTime** +
+__optional__|string (date-time)
+|**creatorId** +
+__optional__|string
+|**description** +
+__optional__|string
+|**effecttime** +
+__optional__|string (date-time)
+|**email** +
+__optional__|string
+|**gender** +
+__optional__|integer (int32)
+|**id** +
+__optional__|string
+|**identityId** +
+__optional__|string
+|**modifierId** +
+__optional__|string
+|**modifyTime** +
+__optional__|string (date-time)
+|**name** +
+__optional__|string
+|**password** +
+__optional__|string
+|**qq** +
+__optional__|string
+|**regionId** +
+__optional__|integer (int64)
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|**userName** +
+__optional__|string
+|**usertype** +
+__optional__|integer (int32)
+|**weixin** +
+__optional__|string
+|===
+
+
+[[_userdto]]
+=== UserDTO
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**birthday** +
+__optional__|string
+|**cellphone** +
+__optional__|string
+|**createTime** +
+__optional__|string (date-time)
+|**creatorId** +
+__optional__|string
+|**description** +
+__optional__|string
+|**effecttime** +
+__optional__|string (date-time)
+|**email** +
+__optional__|string
+|**gender** +
+__optional__|integer (int32)
+|**id** +
+__optional__|string
+|**identityId** +
+__optional__|string
+|**modifierId** +
+__optional__|string
+|**modifyTime** +
+__optional__|string (date-time)
+|**name** +
+__optional__|string
+|**password** +
+__optional__|string
+|**qq** +
+__optional__|string
+|**regionId** +
+__optional__|integer (int64)
+|**sortOrder** +
+__optional__|number (double)
+|**status** +
+__optional__|integer (int32)
+|**userName** +
+__optional__|string
+|**usertype** +
+__optional__|integer (int32)
+|**weixin** +
+__optional__|string
+|===
+
+
+

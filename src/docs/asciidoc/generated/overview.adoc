@@ -1,0 +1,47 @@
+= 【模块】系统管理
+
+
+[[_overview]]
+== Overview
+标准化平台-系统管理功能提供的服务接口
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0
+
+
+=== License information
+[%hardbreaks]
+__Terms of service__ : http://www.beauxie.com
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : 10.0.6.238:8888
+__BasePath__ : /
+
+
+=== Tags
+
+* common-controller : 公共的接口，不需要登录
+* logger-agent-controller : Logger Agent Controller
+* login-controller : 用户登录、注册
+* main-menu-controller : Main Menu Controller
+* notify-message-controller : Notify Message Controller
+* platform-callback-controller : Platform Callback Controller
+* rand-image-controller : 图形验证码
+* service-application-controller : Service Application Controller
+* service-function-controller : 功能管理
+* service-module-controller : Service Module Controller
+* sm-authority-controller : 权限管理
+* sm-button-controller : Sm Button Controller
+* sm-component-controller : Sm Component Controller
+* sm-menu-controller : Sm Menu Controller
+* sm-role-controller : 角色管理
+* sm-user-controller : 用户管理
+* sm-user-group-controller : Sm User Group Controller
+* sm-user-group-releation-controller : Sm User Group Releation Controller
+
+
+

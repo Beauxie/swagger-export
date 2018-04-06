@@ -1,0 +1,6004 @@
+
+[[_paths]]
+== Paths
+
+[[_checkcellphoneexistusingget]]
+=== 验证手机号码是否存在
+....
+GET /common/checkCellphoneExist
+....
+
+
+==== Description
+存在则返回成功，否者返回失败
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**cellphone** +
+__required__|手机号|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_e249bf1902de7f75aaed353ffea96339,Result«string»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* common-controller
+
+
+[[_checkusernameexistusingget]]
+=== 验证用户名是否注册
+....
+GET /common/checkUserNameExist
+....
+
+
+==== Description
+存在则返回成功，否者返回失败
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**userName** +
+__required__|用户名|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_e249bf1902de7f75aaed353ffea96339,Result«string»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* common-controller
+
+
+[[_confirmreadmessageusingpost]]
+=== confirmReadMessage
+....
+POST /confirmReadMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**msgId** +
+__optional__|msgId|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_deleterecordusingpost]]
+=== deleteRecord
+....
+POST /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusingget]]
+=== deleteRecord
+....
+GET /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusingput]]
+=== deleteRecord
+....
+PUT /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusingdelete]]
+=== deleteRecord
+....
+DELETE /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusingpatch]]
+=== deleteRecord
+....
+PATCH /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusinghead]]
+=== deleteRecord
+....
+HEAD /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_deleterecordusingoptions]]
+=== deleteRecord
+....
+OPTIONS /deleteRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**id** +
+__optional__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_historymessageusingpost]]
+=== historyMessage
+....
+POST /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusingget]]
+=== historyMessage
+....
+GET /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusingput]]
+=== historyMessage
+....
+PUT /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusingdelete]]
+=== historyMessage
+....
+DELETE /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusingpatch]]
+=== historyMessage
+....
+PATCH /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusinghead]]
+=== historyMessage
+....
+HEAD /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessageusingoptions]]
+=== historyMessage
+....
+OPTIONS /historyMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingpost]]
+=== historyMessageByConditions
+....
+POST /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingget]]
+=== historyMessageByConditions
+....
+GET /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingput]]
+=== historyMessageByConditions
+....
+PUT /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingdelete]]
+=== historyMessageByConditions
+....
+DELETE /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingpatch]]
+=== historyMessageByConditions
+....
+PATCH /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusinghead]]
+=== historyMessageByConditions
+....
+HEAD /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_historymessagebyconditionsusingoptions]]
+=== historyMessageByConditions
+....
+OPTIONS /historyMessageByConditions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**content** +
+__optional__|content|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**title** +
+__optional__|title|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_826d56d61d5e151b732d6e681d102dda,Result«PageInfo«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_ignoremessageusingpost]]
+=== ignoreMessage
+....
+POST /ignoreMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**msgId** +
+__optional__|msgId|string
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_loginusingpost]]
+=== 校验登录名与密码是否正确
+....
+POST /login/login
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**imageCodeId** +
+__required__|用于获取验证码的唯一标识|string
+|**Query**|**loginName** +
+__required__|登录名，可以为用户名、邮箱、手机号|string
+|**Query**|**password** +
+__required__|密码|string
+|**Body**|**imageCode** +
+__optional__|imageCode|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_1739fbb09684bc014d73584deac158e5,Result«LoginInfoDTO»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* login-controller
+
+
+[[_validatecodeusingpost]]
+=== 验证图形验证码是否正确
+....
+POST /login/validateCode
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**imageCode** +
+__required__|图形验证码|string
+|**Query**|**imageCodeId** +
+__required__|用于获取图形验证码的唯一标识|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* login-controller
+
+
+[[_getallmodulelistusingget]]
+=== getAllModuleList
+....
+GET /mainmenu/getAllModuleList
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_cd7d7797cb157a966d5196d617aec12e,Result«List«ServiceModule»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* main-menu-controller
+
+
+[[_getappidusingget]]
+=== getAppId
+....
+GET /mainmenu/getAppId
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**userId** +
+__required__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* main-menu-controller
+
+
+[[_querysmmoduleandfunctionsusingget]]
+=== querySmModuleAndFunctions
+....
+GET /moduleManage/querySmModuleAndFunctions
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_6a3501f040c7b613b6eadf8880da303b,Result«List«ModuleFunctionDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* main-menu-controller
+
+
+[[_validusingpost]]
+=== valid
+....
+POST /platform/valid
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* main-menu-controller
+
+
+[[_dogetusingget]]
+=== 获取图形验证码
+....
+GET /randImage/imageCode
+....
+
+
+==== Description
+imageCodeId由前端生成，一般为32位uuid，校验验证码时，也必须带上这个imageCodeId
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**imageCodeId** +
+__required__|用于获取验证码的唯一标识|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* rand-image-controller
+
+
+[[_searchusingpost]]
+=== search
+....
+POST /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusingget]]
+=== search
+....
+GET /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusingput]]
+=== search
+....
+PUT /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusingdelete]]
+=== search
+....
+DELETE /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusingpatch]]
+=== search
+....
+PATCH /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusinghead]]
+=== search
+....
+HEAD /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_searchusingoptions]]
+=== search
+....
+OPTIONS /search
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**appName** +
+__optional__|appName|string
+|**Body**|**moduleName** +
+__optional__|moduleName|string
+|**Body**|**operator** +
+__optional__|operator|string
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**pageSize** +
+__optional__|pageSize|integer (int32)
+|**Body**|**subModuleName** +
+__optional__|subModuleName|string
+|**Body**|**terminalType** +
+__optional__|terminalType|string
+|**Body**|**type** +
+__optional__|type|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_a8ba590c0d8c28909f5fd991a360bf78,Result«PageInfo«SmOperateLog»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* logger-agent-controller
+
+
+[[_addusingpost]]
+=== 新增
+....
+POST /serviceApplication/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ServiceApplication** +
+__required__|ServiceApplication对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**logoPath** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**serviceHotline** +
+__optional__||string
+|**Query**|**serviceUrl** +
+__optional__||string
+|**Query**|**status** +
+__optional__||integer (int32)
+|**Query**|**technicalSupport** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_f585a546467deaaa3ef81e43bc80ec9c,Result«ServiceApplication»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_deleteusingpost]]
+=== 删除
+....
+POST /serviceApplication/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_detailusingpost]]
+=== 详情
+....
+POST /serviceApplication/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_f585a546467deaaa3ef81e43bc80ec9c,Result«ServiceApplication»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_getapplicationsettingusingget]]
+=== 获取名称、LOGO等平台信息接口
+....
+GET /serviceApplication/getApplicationSetting
+....
+
+
+==== Description
+维护台或者业务平台启动时调用
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_listusingpost]]
+=== 分页
+....
+POST /serviceApplication/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_updateusingpost]]
+=== 更新
+....
+POST /serviceApplication/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ServiceApplication** +
+__required__|ServiceApplication对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**logoPath** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**serviceHotline** +
+__optional__||string
+|**Query**|**serviceUrl** +
+__optional__||string
+|**Query**|**status** +
+__optional__||integer (int32)
+|**Query**|**technicalSupport** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-application-controller
+
+
+[[_queryfunctiontreeusingget]]
+=== 查询功能树
+....
+GET /serviceFunction/queryFunctionTree
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**praentId** +
+__optional__|父id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2eb15b02d231947fdb53b60394c4121a,Result«List«TreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-function-controller
+
+
+[[_addusingpost_1]]
+=== 新增
+....
+POST /serviceModule/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ServiceModule** +
+__required__|ServiceModule对象|object
+|**Query**|**appId** +
+__optional__||string
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**name** +
+__optional__||string
+|**Query**|**omsModuleId** +
+__optional__||string
+|**Query**|**serviceUrl** +
+__optional__||string
+|**Query**|**type** +
+__optional__||integer (int32)
+|**Query**|**version** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_9b512305f12c727b640b0f0be69c9238,Result«ServiceModule»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-module-controller
+
+
+[[_deleteusingpost_1]]
+=== 删除
+....
+POST /serviceModule/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-module-controller
+
+
+[[_detailusingpost_1]]
+=== 详情
+....
+POST /serviceModule/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_9b512305f12c727b640b0f0be69c9238,Result«ServiceModule»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-module-controller
+
+
+[[_listusingpost_1]]
+=== 分页
+....
+POST /serviceModule/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-module-controller
+
+
+[[_updateusingpost_1]]
+=== 更新
+....
+POST /serviceModule/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ServiceModule** +
+__required__|ServiceModule对象|object
+|**Query**|**appId** +
+__optional__||string
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**name** +
+__optional__||string
+|**Query**|**omsModuleId** +
+__optional__||string
+|**Query**|**serviceUrl** +
+__optional__||string
+|**Query**|**type** +
+__optional__||integer (int32)
+|**Query**|**version** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* service-module-controller
+
+
+[[_authorizedmenuusingpost]]
+=== 菜单授权
+....
+POST /smAuthority/authorizedMenu
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**powers** +
+__optional__|powers|< string > array(multi)
+|**Query**|**roleId** +
+__required__|角色ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_authorizedroleusingpost]]
+=== 角色对角色授权
+....
+POST /smAuthority/authorizedRole
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**powers** +
+__optional__|powers|< string > array(multi)
+|**Query**|**roleId** +
+__required__|角色ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryauthoritymenutreeusingget]]
+=== 根据roleId获取菜单权限树，返回的是所有的菜单树
+....
+GET /smAuthority/queryAuthorityMenuTree
+....
+
+
+==== Description
+如果有权限，则checked属性为true，用于授权时的权限树展示
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**roleId** +
+__optional__|角色ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2eb15b02d231947fdb53b60394c4121a,Result«List«TreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryauthoritymenutreedetailusingget]]
+=== 根据roleId获取已经授权的权限树
+....
+GET /smAuthority/queryAuthorityMenuTreeDetail
+....
+
+
+==== Description
+用于授权时的已有权限展示
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**roleId** +
+__optional__|角色ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2eb15b02d231947fdb53b60394c4121a,Result«List«TreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryauthorityrolelistusingget]]
+=== 根据roleId获取角色权限列表，返回的是所有的角色权限列表
+....
+GET /smAuthority/queryAuthorityRoleList
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**roleId** +
+__required__|角色ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_4a07c0c90ed1f9fdbcb3a3a54a2cb7e0,Result«List«SmRoleDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryuserauthorizedmenulistusingget]]
+=== 根据用户id查询用户的权限
+....
+GET /smAuthority/queryUserAuthorizedMenuList
+....
+
+
+==== Description
+默认查询当前登录用户的权限，且返回一级菜单
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**pid** +
+__optional__|父菜单id|string
+|**Query**|**userId** +
+__optional__|用户id，默认是当前登录用户|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_535ffffcb58127f6d997880974dc9c6b,Result«List«SmMenuDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryuserauthorizedmenutreeusingget]]
+=== 根据用户id查询用户的权限菜单树
+....
+GET /smAuthority/queryUserAuthorizedMenuTree
+....
+
+
+==== Description
+默认查询当前登录用户的权限菜单树，只返回已授权的菜单
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**userId** +
+__optional__|用户id，默认是当前登录用户|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2eb15b02d231947fdb53b60394c4121a,Result«List«TreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_queryuserauthorizedrolelistusingget]]
+=== 根据用户id查询用户的角色权限
+....
+GET /smAuthority/queryUserAuthorizedRoleList
+....
+
+
+==== Description
+默认查询当前登录用户的权限
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**userId** +
+__optional__|用户id，默认是当前登录用户|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_dd846f141dc04671df9d54b16ee03a2b,Result«PageInfo«SmRoleDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-authority-controller
+
+
+[[_addusingpost_2]]
+=== 新增
+....
+POST /smButton/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmButton** +
+__required__|SmButton对象|object
+|**Query**|**description** +
+__optional__||string
+|**Query**|**funcurl** +
+__optional__||string
+|**Query**|**ico** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**menuId** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**requireJS** +
+__optional__||string
+|**Query**|**sortOrder** +
+__optional__||number (double)
+|**Query**|**status** +
+__optional__||integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_6c996bf220ca8f91fe865b6af940de19,Result«SmButton»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-button-controller
+
+
+[[_deleteusingpost_2]]
+=== 删除
+....
+POST /smButton/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-button-controller
+
+
+[[_detailusingpost_2]]
+=== 详情
+....
+POST /smButton/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_6c996bf220ca8f91fe865b6af940de19,Result«SmButton»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-button-controller
+
+
+[[_listusingpost_2]]
+=== 分页
+....
+POST /smButton/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-button-controller
+
+
+[[_updateusingpost_2]]
+=== 更新
+....
+POST /smButton/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmButton** +
+__required__|SmButton对象|object
+|**Query**|**description** +
+__optional__||string
+|**Query**|**funcurl** +
+__optional__||string
+|**Query**|**ico** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**menuId** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**requireJS** +
+__optional__||string
+|**Query**|**sortOrder** +
+__optional__||number (double)
+|**Query**|**status** +
+__optional__||integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-button-controller
+
+
+[[_addusingpost_3]]
+=== 新增
+....
+POST /smComponent/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmComponent** +
+__required__|SmComponent对象|object
+|**Query**|**description** +
+__optional__||string
+|**Query**|**functionId** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**requireJS** +
+__optional__||string
+|**Query**|**sortOrder** +
+__optional__||number (double)
+|**Query**|**status** +
+__optional__||integer (int32)
+|**Query**|**url** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_4625506b33adef160cce171e2fe6e4e5,Result«SmComponent»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-component-controller
+
+
+[[_deleteusingpost_3]]
+=== 删除
+....
+POST /smComponent/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-component-controller
+
+
+[[_detailusingpost_3]]
+=== 详情
+....
+POST /smComponent/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_4625506b33adef160cce171e2fe6e4e5,Result«SmComponent»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-component-controller
+
+
+[[_listusingpost_3]]
+=== 分页
+....
+POST /smComponent/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-component-controller
+
+
+[[_updateusingpost_3]]
+=== 更新
+....
+POST /smComponent/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmComponent** +
+__required__|SmComponent对象|object
+|**Query**|**description** +
+__optional__||string
+|**Query**|**functionId** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**name** +
+__optional__||string
+|**Query**|**requireJS** +
+__optional__||string
+|**Query**|**sortOrder** +
+__optional__||number (double)
+|**Query**|**status** +
+__optional__||integer (int32)
+|**Query**|**url** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-component-controller
+
+
+[[_addmenuusingpost]]
+=== 新增菜单
+....
+POST /smMenu/addMenu
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**funcurl** +
+__optional__|菜单相对URL|string
+|**Query**|**ico** +
+__optional__|图片样式|string
+|**Query**|**name** +
+__required__|菜单名称|string
+|**Query**|**parents** +
+__optional__|父菜单路径,如果为空则表示一级菜单|string
+|**Query**|**requireJS** +
+__optional__|依赖的JS,多个jsUrl用逗号隔开|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_batchdeleteusingdelete]]
+=== 批量删除菜单
+....
+DELETE /smMenu/batchDelete
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ids** +
+__required__|多个id，以逗号隔开|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_37143281216f5dc7987f7540e3c7cad1,Result«List«SmMenu»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_deletebyidusingdelete]]
+=== 根据id删除菜单
+....
+DELETE /smMenu/deleteById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|菜单id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_getbyidusingget]]
+=== 根据id获取菜单详情
+....
+GET /smMenu/getById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|菜单id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_movedownmenuusingput]]
+=== 根据ID对菜单进行下移操作
+....
+PUT /smMenu/moveDownMenu
+....
+
+
+==== Description
+只能对同级菜单进行下移操作
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|菜单id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_moveupmenuusingput]]
+=== 根据ID对菜单进行上移操作
+....
+PUT /smMenu/moveUpMenu
+....
+
+
+==== Description
+只能对同级菜单进行上移操作
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|菜单id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_querymenulistusingget]]
+=== 带分页的查询
+....
+GET /smMenu/queryMenuList
+....
+
+
+==== Description
+根据条件获取菜单列表,可分页，默认查询第一页,一次10条记录
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**name** +
+__optional__|菜单名称,模糊查询|string
+|**Query**|**pageNumber** +
+__optional__|默认第一页，如果小于1，则查出所有的记录|integer (int32)
+|**Query**|**pageSize** +
+__optional__|分页大小，如果小于1，则查出所有的记录,默认10条|integer (int32)
+|**Query**|**pid** +
+__optional__|父菜单id|string
+|**Query**|**status** +
+__optional__|菜单状态:1:正常 2:禁用,当值为-1时，查出所有|integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_querymenutreeusingget]]
+=== 查询菜单树
+....
+GET /smMenu/queryMenuTree
+....
+
+
+==== Description
+默认不包括禁用的菜单树
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**parentspath** +
+__optional__|父路径|string
+|**Query**|**status** +
+__optional__|菜单状态:1:正常 2:禁用,当值为-1时，查出所有|integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2eb15b02d231947fdb53b60394c4121a,Result«List«TreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_querymenutreebyappidusingget]]
+=== queryMenuTreeByAppId
+....
+GET /smMenu/queryMenuTreeByAppId
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_3249ed2a8b4e3d52befab695c0abb7b5,Result«List«MenuTreeNode»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_savemenutreeusingpost]]
+=== saveMenuTree
+....
+POST /smMenu/saveMenuTree
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**jsonObj** +
+__required__|jsonObj|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_updatebyidusingput]]
+=== 根据ID修改菜单
+....
+PUT /smMenu/updateById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**funcurl** +
+__optional__|菜单相对URL|string
+|**Query**|**ico** +
+__optional__|图片样式|string
+|**Query**|**id** +
+__required__|菜单id|string
+|**Query**|**name** +
+__optional__|菜单名称|string
+|**Query**|**parents** +
+__optional__|父菜单路径,如果为空则表示一级菜单|string
+|**Query**|**requireJS** +
+__optional__|依赖的JS,多个jsUrl用逗号隔开|string
+|**Query**|**sortOrder** +
+__optional__|排序号|string
+|**Query**|**status** +
+__optional__|状态,1:正常 2:禁用|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_74b4a298075fb459d07747c0bbb02b4c,Result«SmMenu»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_updatestatusbyfunctionidlistusingpost]]
+=== updateStatusByFunctionIdList
+....
+POST /smMenu/updateStatusByFunctionIdList
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**jsonObj** +
+__required__|jsonObj|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-menu-controller
+
+
+[[_addroleusingpost]]
+=== 新增角色
+....
+POST /smRole/addRole
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**name** +
+__required__|角色名称|string
+|**Query**|**typeId** +
+__required__|基础角色类型Id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_aa6e09d099333372a16b1995336e53ca,Result«SmRole»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_batchdeleteusingdelete_1]]
+=== 批量删除角色
+....
+DELETE /smRole/batchDelete
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**ids** +
+__required__|多个id以逗号隔开|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_215a6b225584484906506191de09694c,Result«List«SmRole»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_deletebyidusingdelete_1]]
+=== 根据id删除角色
+....
+DELETE /smRole/deleteById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|角色id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_aa6e09d099333372a16b1995336e53ca,Result«SmRole»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_getbyidusingget_1]]
+=== 根据id获取角色详情
+....
+GET /smRole/getById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|角色id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_aa6e09d099333372a16b1995336e53ca,Result«SmRole»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_queryrolelistusingget]]
+=== 带分页的查询
+....
+GET /smRole/queryRoleList
+....
+
+
+==== Description
+根据条件获取角色列表,可分页，默认查询第一页,默认一次10条记录
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**name** +
+__optional__|角色名称,模糊查询|string
+|**Query**|**pageNumber** +
+__optional__|默认第一页，如果小于1，则查出所有的记录|integer (int32)
+|**Query**|**pageSize** +
+__optional__|分页大小，如果小于1，则查出所有的记录,默认10条|integer (int32)
+|**Query**|**status** +
+__optional__|角色状态:1:正常 2:禁用,当值为-1时，查出所有|integer (int32)
+|**Query**|**typeId** +
+__optional__|基础角色类型Id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_queryrolelistbyuseridusingget]]
+=== 根据用户id获取用户角色
+....
+GET /smRole/queryRoleListByUserId
+....
+
+
+==== Description
+返回的是未被禁用角色集合
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**userId** +
+__required__|用户id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_4a07c0c90ed1f9fdbcb3a3a54a2cb7e0,Result«List«SmRoleDTO»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_queryroletypelistusingget]]
+=== 获取所有基本角色类型
+....
+GET /smRole/queryRoleTypeList
+....
+
+
+==== Description
+获取所有基本角色类型
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_ed59fd2a449f9d576cff1796b372f2fc,Result«List«SmRoleType»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_updatebyidusingput_1]]
+=== 根据ID修改角色
+....
+PUT /smRole/updateById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**id** +
+__required__|角色id|string
+|**Query**|**name** +
+__optional__|角色名称|string
+|**Query**|**status** +
+__optional__|状态,1:正常 2:禁用|string
+|**Query**|**type_id** +
+__optional__|基础角色类型ID|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_aa6e09d099333372a16b1995336e53ca,Result«SmRole»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-role-controller
+
+
+[[_adduserusingpost]]
+=== 新增用户
+....
+POST /smUser/addUser
+....
+
+
+==== Description
+传入名字，用户名，密码,保存成功后返回用户id
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**birthday** +
+__optional__|生日|string
+|**Query**|**cellphone** +
+__required__|手机号码|string
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**email** +
+__optional__|邮箱地址|string
+|**Query**|**gender** +
+__optional__|性别：1（男）、2（女）|string
+|**Query**|**name** +
+__required__|用户真实姓名|string
+|**Query**|**password** +
+__required__|登录密码|string
+|**Query**|**qq** +
+__optional__|QQ号|string
+|**Query**|**regionId** +
+__optional__|所属行政区域ID|string
+|**Query**|**roleIds** +
+__required__|用户角色，多个角色以逗号隔开|string
+|**Query**|**userName** +
+__required__|用户名|string
+|**Query**|**weixin** +
+__optional__|微信账号|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c325cb68f7bdaad8aa7df5c0208b027f,Result«User»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-controller
+
+
+[[_deletebyidusingdelete_2]]
+=== 根据id删除用户
+....
+DELETE /smUser/deleteById
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|用户id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c325cb68f7bdaad8aa7df5c0208b027f,Result«User»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-controller
+
+
+[[_getbyidusingget_2]]
+=== 获取用户信息
+....
+GET /smUser/getById
+....
+
+
+==== Description
+根据用户id查找用户信息,成功返回用户信息，否则返回空
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|用户id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_4f607e52b445989f6e67d8cec6972486,Result«UserDTO»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-controller
+
+
+[[_queryuserlistusingget]]
+=== 带分页的查询
+....
+GET /smUser/queryUserList
+....
+
+
+==== Description
+根据条件获取用户列表,可分页，默认查询第一页,一次10条记录
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**cellphone** +
+__optional__|用户手机号码，模糊查询|string
+|**Query**|**email** +
+__optional__|用户邮箱，模糊查询|string
+|**Query**|**name** +
+__optional__|用户名称,模糊查询|string
+|**Query**|**pageNumber** +
+__optional__|默认第一页，如果小于1，则查出所有的记录|integer (int32)
+|**Query**|**pageSize** +
+__optional__|分页大小，如果小于1，则查出所有的记录,默认10条|integer (int32)
+|**Query**|**regionId** +
+__optional__|所属行政区域id|string
+|**Query**|**roleId** +
+__optional__|所属角色id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-controller
+
+
+[[_updatebyidusingput_2]]
+=== 根据用户ID修改用户信息
+....
+PUT /smUser/updateById
+....
+
+
+==== Description
+修改用户信息
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**birthday** +
+__optional__|生日|string
+|**Query**|**cellphone** +
+__optional__|手机号码|string
+|**Query**|**description** +
+__optional__|描述|string
+|**Query**|**email** +
+__optional__|邮箱地址|string
+|**Query**|**gender** +
+__optional__|性别：1（男）、2（女）|string
+|**Query**|**id** +
+__required__|用户id|string
+|**Query**|**name** +
+__optional__|用户真实姓名|string
+|**Query**|**password** +
+__optional__|登录密码|string
+|**Query**|**qq** +
+__optional__|QQ号|string
+|**Query**|**regionId** +
+__optional__|所属行政区域ID|string
+|**Query**|**roleIds** +
+__optional__|用户角色，多个角色以逗号隔开|string
+|**Query**|**userName** +
+__optional__|用户名|string
+|**Query**|**weixin** +
+__optional__|微信账号|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c325cb68f7bdaad8aa7df5c0208b027f,Result«User»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-controller
+
+
+[[_addusingpost_4]]
+=== 新增
+....
+POST /smUserGroup/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmUserGroup** +
+__required__|SmUserGroup对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**groupName** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c160f838543cca27ab49e702fdb3d3d6,Result«SmUserGroup»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-controller
+
+
+[[_deleteusingpost_4]]
+=== 删除
+....
+POST /smUserGroup/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-controller
+
+
+[[_detailusingpost_4]]
+=== 详情
+....
+POST /smUserGroup/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_c160f838543cca27ab49e702fdb3d3d6,Result«SmUserGroup»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-controller
+
+
+[[_listusingpost_4]]
+=== 分页
+....
+POST /smUserGroup/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-controller
+
+
+[[_updateusingpost_4]]
+=== 更新
+....
+POST /smUserGroup/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmUserGroup** +
+__required__|SmUserGroup对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**groupName** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-controller
+
+
+[[_addusingpost_5]]
+=== 新增
+....
+POST /smUserGroupReleation/add
+....
+
+
+==== Description
+单表新增
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmUserGroupReleation** +
+__required__|SmUserGroupReleation对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**groupId** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**userId** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2677575fddd365b4f43382ae1056ee12,Result«SmUserGroupReleation»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-releation-controller
+
+
+[[_deleteusingpost_5]]
+=== 删除
+....
+POST /smUserGroupReleation/delete
+....
+
+
+==== Description
+单表删除
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-releation-controller
+
+
+[[_detailusingpost_5]]
+=== 详情
+....
+POST /smUserGroupReleation/detail
+....
+
+
+==== Description
+单表详情
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**id** +
+__required__|id|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_2677575fddd365b4f43382ae1056ee12,Result«SmUserGroupReleation»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-releation-controller
+
+
+[[_listusingpost_5]]
+=== 分页
+....
+POST /smUserGroupReleation/list
+....
+
+
+==== Description
+单表分页
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**page** +
+__required__|页码|ref
+|**Query**|**size** +
+__required__|页数|ref
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_5f0f2a4ab0639f5572384cbe8ab889eb,Result«PageInfo»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-releation-controller
+
+
+[[_updateusingpost_5]]
+=== 更新
+....
+POST /smUserGroupReleation/update
+....
+
+
+==== Description
+单表更新
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**SmUserGroupReleation** +
+__required__|SmUserGroupReleation对象|object
+|**Query**|**createTime** +
+__optional__||string (date-time)
+|**Query**|**description** +
+__optional__||string
+|**Query**|**groupId** +
+__optional__||string
+|**Query**|**id** +
+__optional__||string
+|**Query**|**lastModifyTime** +
+__optional__||string (date-time)
+|**Query**|**userId** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* sm-user-group-releation-controller
+
+
+[[_subscriberusingpost]]
+=== subscriber
+....
+POST /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusingget]]
+=== subscriber
+....
+GET /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusingput]]
+=== subscriber
+....
+PUT /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusingdelete]]
+=== subscriber
+....
+DELETE /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusingpatch]]
+=== subscriber
+....
+PATCH /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusinghead]]
+=== subscriber
+....
+HEAD /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscriberusingoptions]]
+=== subscriber
+....
+OPTIONS /subscriber
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingpost]]
+=== subscriberMessage
+....
+POST /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingget]]
+=== subscriberMessage
+....
+GET /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingput]]
+=== subscriberMessage
+....
+PUT /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingdelete]]
+=== subscriberMessage
+....
+DELETE /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingpatch]]
+=== subscriberMessage
+....
+PATCH /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusinghead]]
+=== subscriberMessage
+....
+HEAD /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_subscribermessageusingoptions]]
+=== subscriberMessage
+....
+OPTIONS /subscriberMessage
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**pageNumber** +
+__optional__|pageNumber|integer (int32)
+|**Body**|**userId** +
+__optional__|userId|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_da9d7dccfb91abd3ba756321c820aebc,Result«List«SmMessageNotification»»>>
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* notify-message-controller
+
+
+[[_syncappmoduleandfunctionsusingpost]]
+=== syncAppModuleAndFunctions
+....
+POST /syncAppModuleAndFunctions
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**syncData** +
+__required__|syncData|<<_synchronousoperatedata,SynchronousOperateData>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* platform-callback-controller
+
+
+[[_synchronousappusingpost]]
+=== synchronousApp
+....
+POST /syncApplication
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**body** +
+__required__|body|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_72839f641ce130c8a6904a9ec5cebbe6,Result«object»>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* platform-callback-controller
+
+
+
